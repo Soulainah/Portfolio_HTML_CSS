@@ -1,0 +1,268 @@
+/* Définition des polices personnalisées */
+@font-face {
+    font-family: 'KaushanScript-Regular';
+    src: url('polices/KaushanScript-Regular.ttf');
+    src: url('polices/OFL.txt'),;
+    font-weight: lighter;
+    font-style: normal;
+    }
+body, html {
+    margin: 0;  /*full page height et margin*/ 
+    }
+.fondsite {
+    background-color: black;
+    }
+h1, h2, h3, .soustitre {
+    font-family: 'KaushanScript-Regular';
+    }
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(226, 180, 187);
+    padding-top:50px; /*saut de ligne haut*/
+    padding-bottom:20px; /*saut de ligne bas*/
+    }
+/*partie navbar*/
+.menu {
+    position: fixed; /*fixer la nav*/
+    overflow: hidden; /*fixer la nav*/
+    width: 100%; /*fixer la nav*/
+    height: 50px;
+    background-color: rgb(179, 118, 127);
+    display: flex;
+    justify-content: center;
+    z-index: 4; /*position premier plan*/
+    }
+.navbar li {
+    font-size: 20px;
+    display: inline-block; /*sur la meme ligne*/
+    margin-left: 80px;     /*espace entre les blocs*/
+    }
+.navbar a {
+    text-decoration: none; /*pour ne pas avoir de lien souligné*/
+    color: black;
+    }
+.navbar :hover {
+    color:rgb(14, 155, 180); /*Couleur du texte du menu au survol*/
+    } 
+/*partie bandeau*/
+.bandeau {
+    height: 600px;
+    background-image: url(images/wallpaper4.gif); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;  
+    }
+.titre {
+    width: 50%;
+    border: 15px solid black;
+    border-style: double;
+    margin: auto;
+    background-color: rgba(236, 216, 219, 0.8);
+    }
+.titre h1, .soustitre {
+    text-align: center;
+    font-size: 60px;
+    }
+.titre p {
+    color: black;
+    }
+/*partie presentation*/
+section {
+    width:51%;
+    display: inline-block;
+    margin-left:100px;
+    }
+section p {
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 50px;
+    color: rgb(226, 180, 187);
+    }   
+.guillemethaut {
+    width: 5%;
+    }
+.guillemetbas {
+    width: 5%;
+    margin-left: 950px;
+    }
+.iconepassion {
+    margin-left: 100px;
+    }
+.photo {
+    width: 25%;
+    float: right;
+    }
+.photo img {
+    width: 50%;
+    background-color:rgb(226, 180, 187) ;           
+    border: 1px solid black;
+    border-radius: 50%;
+    }
+/*partie competences*/
+.competences img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+/*partie experiences*/
+*   {
+    box-sizing: border-box; /*pour fixer le tout*/
+    z-index: 2; /*position premier plan*/
+    }
+/*la ligne et largeur bulle*/
+.ligneverticale {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+    }
+/*La ligne*/
+.ligneverticale::after {
+    content: ''; /*la ligne aparaisse*/
+    position: absolute;
+    width: 6px;
+    background-color: rgb(226, 180, 187);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    }
+/* separation des bulles */
+.container {
+    padding: 10px 40px; /*une marge interieur*/
+    position: relative; /*fixer la position alternative*/
+    width: 50%;
+    }
+/* petit rond*/
+.container::after {
+    content: ''; /*la ligne aparaisse*/
+    position: absolute; /*fixer la position*/
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: black;
+    border: 4px solid rgb(226, 180, 187);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1; /*position premier plan*/
+    }
+/* fixer les bulles a gauche*/
+.gauche {
+    left: 0;
+    }
+/* fixer les bulles a droites*/
+.droit {
+    left: 50%;
+    }
+/* pointeur droit */
+.gauche::before {
+    content: " "; /*la ligne aparaisse*/
+    position: absolute; /*fixer la position*/
+    top: 22px; /*fixer la position*/
+    z-index: 1; /*position premier plan*/
+    right: 30px; /*postion pointeur*/
+    border: medium solid rgb(226, 180, 187);
+    border-width: 10px 0 10px 10px; /*largeur pour faire forme triangle*/
+    border-color: transparent transparent transparent rgb(226, 180, 187);
+    }
+/* pointeur gauche */
+.droit::before {
+    content: " "; /*la ligne aparaisse*/
+    position: absolute; /*fixer la position*/
+    top: 22px; /*fixer la position*/
+    z-index: 1; /*position premier plan*/
+    left: 30px; /*postion pointeur*/
+    border: medium solid rgb(226, 180, 187);
+    border-width: 10px 10px 10px 0; /*largeur pour faire forme triangle*/
+    border-color: transparent rgb(226, 180, 187)transparent transparent ;
+    }
+/* POur que les cercles soit sur la ligne */
+.droit::after {
+    left: -16px;
+    }
+/* pour faire les bulles */
+.content {
+    padding: 20px 30px;
+    background-color: rgb(226, 180, 187);
+    position: relative;
+    border-radius: 6px;
+    }
+/* mise en page texte */
+.content h3 {
+    font-size: 40px;
+    }
+.content p {
+    font-family: 'KaushanScript-Regular';
+    font-size: 25px;
+    }
+.content li {
+    font-size: 20px;
+    }
+/* mise en page image*/
+.contentlogo {
+   display: flex;
+   justify-content: space-between;
+   width: auto;
+    height: 80px;
+    }
+.descodeuses {
+    width: auto;
+    height: 100px;
+    }
+.parella{
+    width: auto;
+    height: 50px;
+    }
+/*partie projet*/
+/*mise en page vignette projet*/
+.projets {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 80px;
+    padding-bottom: 100px;
+    }
+.projets img {
+    height: 300px;
+    border-radius: 10%;
+    }
+/*transition sombre */ 
+.projets div img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    }
+.projets div:hover img {
+	opacity: .2;
+    }
+.projets div:hover .txtprojet{
+    visibility: visible; /*texte visible */ 
+    opacity: 1; 
+    }
+/*pour mettre un texte sur une image */ 
+.txtprojet {
+    color: white;
+    font-size: 60px;
+    position: relative; /*Texte chaque bloc */ 
+    display: flex;
+    justify-content: space-around;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%); /*transparence */ 
+    opacity: 0; /*texte invisible */ 
+    visibility: hidden; /*texte caché */ 
+    }
+.projets a {
+    text-decoration: none;
+    }              
+/*partie footer contact*/
+.contact {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(226, 180, 187);
+    }
+.contact img {
+    margin-left: 100px; /*espace entre les blocs*/
+    }
