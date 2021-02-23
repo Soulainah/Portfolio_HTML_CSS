@@ -7,7 +7,7 @@
     font-style: normal;
     }
 body, html {
-    margin: 0;  /*full page height et margin*/ 
+    margin: 0;  /*full page*/ 
     }
 .fondsite {
     background-color: black;
@@ -211,9 +211,9 @@ section p {
     width: auto;
     height: 100px;
     }
-.parella{
+.tetris{
     width: auto;
-    height: 50px;
+    height: 140px;
     }
 /*partie projet*/
 /*mise en page vignette projet*/
